@@ -1,0 +1,47 @@
+[build-system]
+requires = ["hatchling>=1.27.0", "wheel"]
+
+# build-backend = "setuptools.build_meta"
+build-backend = "hatchling.build"
+
+[project]
+name="glpi_grafana_exporter"
+dynamic = [ "version" ]
+license = { file = "LICENSE" }
+
+
+dependencies = [
+    'sqlalchemy',
+    'python-dotenv'
+]
+authors = [
+  { name="Yaroslav Polyakov", email="yaroslaff@gmail.com" },
+]
+description = "Find string anywhere in database"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/yaroslaff/glpi-grafana-exporter"
+Issues = "https://github.com/yaroslaff/glpi-grafana-exporter/issues"
+
+
+[project.scripts]
+glpi-grafana-exporter = "glpi_grafana_exporter:main"
+
+[project.optional-dependencies]
+mysql = [
+    'mysqlclient'
+]
+postgresql = [
+  'psycopg2'  
+]
+
+
+[tool.hatch.version]
+path = 'glpi_grafana_exporter/__init__.py'
