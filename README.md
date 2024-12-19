@@ -16,7 +16,7 @@ OPEN=25
 ~~~
 
 DBURL is in SQLAlchemy format: `dialect+driver://username:password@host:port/database`, e.g.:
-~~
+~~~
 postgresql+psycopg2://user:password@localhost:5432/mydatabase
 mysql://user:password@localhost:3306/mydatabase
 ~~~
