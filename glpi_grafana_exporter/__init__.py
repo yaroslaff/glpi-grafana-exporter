@@ -2,12 +2,15 @@ import argparse
 import os
 import json
 import datetime
+import random
 from dotenv import load_dotenv
 from sqlalchemy import create_engine, MetaData, Table, func, select, cast, Date, desc
 
 from sqlalchemy.engine import Engine
 from sqlalchemy.orm import Session, aliased
 from sqlalchemy.ext.automap import automap_base
+
+from .fake import fake_ticket_titles, fake_users
 
 __version__ = '0.0.1'
 
@@ -76,6 +79,7 @@ def get_args(dotenv_file = None):
     parser.add_argument('--day', metavar='YYYY-MM-DD', default=None, 
                         help='calculate statistics for specific day')
     parser.add_argument('-o','--open', metavar='N_TICKETS', default=def_open, help='Include last N tickets in statistics')
+    parser.add_argument('-f','--fake', default=False, action='store_true', help='Mask real sensitive data with fake (for demo purpose)')
 
     args = parser.parse_args()    
 
@@ -200,7 +204,7 @@ def update_statistics(engine: Engine, Tickets: Table, Users: Table, statistics: 
 
                 t = {
                     'id': row.id,
-                    'name': row.name,
+                    'name': row.name if not args.fake else random.choice(fake_ticket_titles),
                     'status': incident_status_map.get(row.status, str(row.status)),
                     'date': row.date.strftime('%Y-%m-%d %H:%M'),
                     'solvedate': row.solvedate.strftime('%Y-%m-%d %H:%M') if row.solvedate else "",
@@ -212,8 +216,8 @@ def update_statistics(engine: Engine, Tickets: Table, Users: Table, statistics: 
                     'urgency': incident_lohi_map.get(row.urgency, str(row.urgency)),
 
                     # users
-                    'lastupdater': users[row.users_id_lastupdater],
-                    'recipient': users[row.users_id_recipient],                    
+                    'lastupdater': users[row.users_id_lastupdater] if not args.fake else random.choice(fake_users),
+                    'recipient': users[row.users_id_recipient] if not args.fake else random.choice(fake_users),
                 }
                 statistics['last_tickets'].append(t)
 

@@ -2,48 +2,50 @@
     "summary": [
         {
             "status": "total",
-            "count": 2824
+            "count": 2833
         },
+        {
+            "status": "closed",
+            "count": 2807
+        }
+    ],
+    "current": [
         {
             "status": "new",
             "count": 0
         },
         {
-            "status": "open",
-            "count": 10
+            "status": "assigned",
+            "count": 13
         },
         {
-            "status": "waiting",
+            "status": "planned",
             "count": 0
         },
         {
-            "status": "inprogress",
-            "count": 17
+            "status": "pending",
+            "count": 13
         },
         {
-            "status": "resolved",
+            "status": "solved",
             "count": 0
-        },
-        {
-            "status": "closed",
-            "count": 2797
         }
     ],
     "daily": [
         {
             "date": "2024-12-19",
-            "solved": 0,
-            "open": 0
+            "solved": 2,
+            "open": 1
         },
         {
             "date": "2024-12-18",
-            "solved": 0,
-            "open": 0
+            "solved": 6,
+            "open": 6
         },
         {
             "date": "2024-12-17",
-            "solved": 7,
-            "open": 8
+            "solved": 9,
+            "open": 10
         },
         {
             "date": "2024-12-16",
@@ -1854,6 +1856,346 @@
             "date": "2023-12-21",
             "solved": 1,
             "open": 5
+        }
+    ],
+    "last_tickets": [
+        {
+            "id": 2838,
+            "name": "Data Backup Failed on Server XYZ",
+            "status": "pending",
+            "date": "2024-12-19 17:39",
+            "solvedate": "",
+            "type": "incident",
+            "impact": "medium",
+            "priority": "medium",
+            "urgency": "medium",
+            "lastupdater": "Christopher Martin",
+            "recipient": "Mia Martinez"
+        },
+        {
+            "id": 2837,
+            "name": "Printer Not Responding in Office 2B",
+            "status": "assigned",
+            "date": "2024-12-18 23:10",
+            "solvedate": "",
+            "type": "incident",
+            "impact": "medium",
+            "priority": "high",
+            "urgency": "high",
+            "lastupdater": "David Miller",
+            "recipient": "John Doe"
+        },
+        {
+            "id": 2836,
+            "name": "System Performance Slows During Peak Hours",
+            "status": "assigned",
+            "date": "2024-12-18 20:40",
+            "solvedate": "",
+            "type": "incident",
+            "impact": "medium",
+            "priority": "high",
+            "urgency": "high",
+            "lastupdater": "Laura Thomas",
+            "recipient": "Christopher Martin"
+        },
+        {
+            "id": 2835,
+            "name": "Error When Syncing Files Between Devices",
+            "status": "assigned",
+            "date": "2024-12-18 16:10",
+            "solvedate": "",
+            "type": "request",
+            "impact": "medium",
+            "priority": "medium",
+            "urgency": "medium",
+            "lastupdater": "William Robinson",
+            "recipient": "Emma Jackson"
+        },
+        {
+            "id": 2815,
+            "name": "Request to Schedule Training for New Software",
+            "status": "assigned",
+            "date": "2024-12-14 00:12",
+            "solvedate": "",
+            "type": "incident",
+            "impact": "medium",
+            "priority": "high",
+            "urgency": "high",
+            "lastupdater": "Sarah Wilson",
+            "recipient": "Emma Jackson"
+        },
+        {
+            "id": 2803,
+            "name": "Unable to Access Email Account After Password Reset",
+            "status": "pending",
+            "date": "2024-12-10 21:37",
+            "solvedate": "",
+            "type": "incident",
+            "impact": "medium",
+            "priority": "high",
+            "urgency": "high",
+            "lastupdater": "Olivia Harris",
+            "recipient": "Sophia Thompson"
+        },
+        {
+            "id": 2798,
+            "name": "Software License Expiry Notification",
+            "status": "assigned",
+            "date": "2024-12-09 23:30",
+            "solvedate": "",
+            "type": "incident",
+            "impact": "medium",
+            "priority": "high",
+            "urgency": "high",
+            "lastupdater": "Emily Davis",
+            "recipient": "Olivia Harris"
+        },
+        {
+            "id": 2796,
+            "name": "Request to Create a New User Account in CRM",
+            "status": "assigned",
+            "date": "2024-12-09 22:27",
+            "solvedate": "",
+            "type": "incident",
+            "impact": "medium",
+            "priority": "high",
+            "urgency": "high",
+            "lastupdater": "Sophia Thompson",
+            "recipient": "Laura Thomas"
+        },
+        {
+            "id": 2789,
+            "name": "Mobile App Crashing on Launch for Multiple Users",
+            "status": "assigned",
+            "date": "2024-12-07 00:07",
+            "solvedate": "",
+            "type": "incident",
+            "impact": "medium",
+            "priority": "high",
+            "urgency": "high",
+            "lastupdater": "Robert Johnson",
+            "recipient": "Michael Brown"
+        },
+        {
+            "id": 2788,
+            "name": "Software License Expiry Notification",
+            "status": "assigned",
+            "date": "2024-12-07 00:06",
+            "solvedate": "",
+            "type": "incident",
+            "impact": "medium",
+            "priority": "high",
+            "urgency": "high",
+            "lastupdater": "Emily Davis",
+            "recipient": "David Miller"
+        },
+        {
+            "id": 2783,
+            "name": "Unable to Access Email Account After Password Reset",
+            "status": "pending",
+            "date": "2024-12-05 18:45",
+            "solvedate": "",
+            "type": "incident",
+            "impact": "high",
+            "priority": "high",
+            "urgency": "medium",
+            "lastupdater": "Mia Martinez",
+            "recipient": "Jane Smith"
+        },
+        {
+            "id": 2781,
+            "name": "Request for New Laptop: Approval Needed",
+            "status": "assigned",
+            "date": "2024-12-05 15:39",
+            "solvedate": "",
+            "type": "incident",
+            "impact": "very high",
+            "priority": "very high",
+            "urgency": "very high",
+            "lastupdater": "Sarah Wilson",
+            "recipient": "Andrew Garcia"
+        },
+        {
+            "id": 2765,
+            "name": "Request for New Laptop: Approval Needed",
+            "status": "assigned",
+            "date": "2024-11-29 23:21",
+            "solvedate": "",
+            "type": "incident",
+            "impact": "medium",
+            "priority": "high",
+            "urgency": "high",
+            "lastupdater": "Andrew Garcia",
+            "recipient": "Emma Jackson"
+        },
+        {
+            "id": 2764,
+            "name": "Error When Syncing Files Between Devices",
+            "status": "pending",
+            "date": "2024-11-29 23:16",
+            "solvedate": "",
+            "type": "incident",
+            "impact": "medium",
+            "priority": "high",
+            "urgency": "high",
+            "lastupdater": "John Doe",
+            "recipient": "Christopher Martin"
+        },
+        {
+            "id": 2762,
+            "name": "Delay in Receiving Automated Alert Emails",
+            "status": "assigned",
+            "date": "2024-11-29 23:10",
+            "solvedate": "",
+            "type": "incident",
+            "impact": "medium",
+            "priority": "high",
+            "urgency": "high",
+            "lastupdater": "James Anderson",
+            "recipient": "Michael Brown"
+        },
+        {
+            "id": 2746,
+            "name": "Website Down: Error 500 on Homepage",
+            "status": "pending",
+            "date": "2024-11-27 15:15",
+            "solvedate": "",
+            "type": "incident",
+            "impact": "medium",
+            "priority": "high",
+            "urgency": "high",
+            "lastupdater": "Jessica Taylor",
+            "recipient": "David Miller"
+        },
+        {
+            "id": 2742,
+            "name": "Delay in Receiving Automated Alert Emails",
+            "status": "assigned",
+            "date": "2024-11-25 23:46",
+            "solvedate": "",
+            "type": "incident",
+            "impact": "medium",
+            "priority": "high",
+            "urgency": "very high",
+            "lastupdater": "Robert Johnson",
+            "recipient": "Andrew Garcia"
+        },
+        {
+            "id": 2738,
+            "name": "User Account Locked Due to Multiple Login Attempts",
+            "status": "pending",
+            "date": "2024-11-22 22:55",
+            "solvedate": "",
+            "type": "incident",
+            "impact": "medium",
+            "priority": "high",
+            "urgency": "high",
+            "lastupdater": "David Miller",
+            "recipient": "Emily Davis"
+        },
+        {
+            "id": 2697,
+            "name": "Software License Expiry Notification",
+            "status": "pending",
+            "date": "2024-11-13 21:50",
+            "solvedate": "",
+            "type": "incident",
+            "impact": "medium",
+            "priority": "medium",
+            "urgency": "medium",
+            "lastupdater": "Olivia Harris",
+            "recipient": "William Robinson"
+        },
+        {
+            "id": 2679,
+            "name": "Login Issues After Password Policy Update",
+            "status": "pending",
+            "date": "2024-11-07 21:34",
+            "solvedate": "",
+            "type": "request",
+            "impact": "medium",
+            "priority": "high",
+            "urgency": "high",
+            "lastupdater": "Sarah Wilson",
+            "recipient": "William Robinson"
+        },
+        {
+            "id": 2676,
+            "name": "VPN Connection Drops Intermittently",
+            "status": "assigned",
+            "date": "2024-11-06 22:05",
+            "solvedate": "",
+            "type": "incident",
+            "impact": "medium",
+            "priority": "high",
+            "urgency": "very high",
+            "lastupdater": "Emily Davis",
+            "recipient": "Michael Brown"
+        },
+        {
+            "id": 2675,
+            "name": "Website Down: Error 500 on Homepage",
+            "status": "pending",
+            "date": "2024-11-06 22:04",
+            "solvedate": "",
+            "type": "incident",
+            "impact": "medium",
+            "priority": "high",
+            "urgency": "very high",
+            "lastupdater": "Laura Thomas",
+            "recipient": "William Robinson"
+        },
+        {
+            "id": 2674,
+            "name": "Error When Syncing Files Between Devices",
+            "status": "pending",
+            "date": "2024-11-06 21:52",
+            "solvedate": "",
+            "type": "incident",
+            "impact": "medium",
+            "priority": "high",
+            "urgency": "high",
+            "lastupdater": "Isabella Clark",
+            "recipient": "Isabella Clark"
+        },
+        {
+            "id": 2620,
+            "name": "Data Backup Failed on Server XYZ",
+            "status": "pending",
+            "date": "2024-10-22 14:09",
+            "solvedate": "",
+            "type": "incident",
+            "impact": "medium",
+            "priority": "medium",
+            "urgency": "medium",
+            "lastupdater": "Christopher Martin",
+            "recipient": "Mia Martinez"
+        },
+        {
+            "id": 2490,
+            "name": "Delay in Receiving Automated Alert Emails",
+            "status": "pending",
+            "date": "2024-08-02 20:01",
+            "solvedate": "",
+            "type": "incident",
+            "impact": "medium",
+            "priority": "medium",
+            "urgency": "medium",
+            "lastupdater": "Jane Smith",
+            "recipient": "James Anderson"
+        },
+        {
+            "id": 2151,
+            "name": "Delay in Receiving Automated Alert Emails",
+            "status": "pending",
+            "date": "2024-02-10 00:02",
+            "solvedate": "",
+            "type": "incident",
+            "impact": "medium",
+            "priority": "6",
+            "urgency": "medium",
+            "lastupdater": "Daniel Moore",
+            "recipient": "Sophia Thompson"
         }
     ]
 }

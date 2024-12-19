@@ -20,7 +20,7 @@ DBURL is in SQLAlchemy format: `dialect+driver://username:password@host:port/dat
 postgresql+psycopg2://user:password@localhost:5432/mydatabase
 mysql://user:password@localhost:3306/mydatabase
 ~~~
-(you can omit +driver part)
+(you can omit `+driver` part)
 
 
 Use:
