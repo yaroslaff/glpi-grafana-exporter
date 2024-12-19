@@ -2,8 +2,7 @@
 
 This script exports GLPI statistics from database into JSON format, usable with [grafana-infinity-datasource](https://github.com/grafana/grafana-infinity-datasource) plugin of [Grafana](https://grafana.com/). Tested on GLPI version 10.0.6.
 
-![image](demo/glpi-grafana-dashboard-small.png)
-
+![image](https://raw.githubusercontent.com/yaroslaff/glpi-grafana-exporter/refs/heads/master/demo/glpi-grafana-dashboard-small.png)
 
 ## Install
 ~~~

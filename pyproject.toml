@@ -17,7 +17,7 @@ dependencies = [
 authors = [
   { name="Yaroslav Polyakov", email="yaroslaff@gmail.com" },
 ]
-description = "Find string anywhere in database"
+description = "Export GLPI statistics into Grafana (Grafana Cloud)"
 readme = "README.md"
 requires-python = ">=3.8"
 classifiers = [
