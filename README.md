@@ -2,11 +2,16 @@
 
 This script exports GLPI statistics from database into JSON format, usable with [grafana-infinity-datasource](https://github.com/grafana/grafana-infinity-datasource) plugin of [Grafana](https://grafana.com/). Tested on GLPI version 10.0.6.
 
-
-
 ![image](demo/glpi-grafana-dashboard-small.png)
 
-Example config:
+
+## Install
+~~~
+pipx install glpi-grafana-exporter[mysql]
+~~~
+(or postgresql)
+
+Example config (`config.env`):
 ~~~
 DBURL=mysql:///support
 TICKETS_TABLE=glpi_tickets
@@ -23,11 +28,15 @@ mysql://user:password@localhost:3306/mydatabase
 (you can omit `+driver` part)
 
 
-Use:
+## Make JSON file 
 ~~~
 # make glpi.json with statistics for last year
-glpi-grafana-exporter -c config.env --soft 365
+glpi-grafana-exporter -c config.env --hard 365
 
 # recalculate statistics for a last 3 days (for [daily] cron job)
 glpi-grafana-exporter -c config.env --hard 3
 ~~~
+at this step you get glpi.json file for Grafana with Infinity Datasource plugin. Update it from cron job.
+
+## Make grafana dashboard
+use [demo/dashboard.json](https://raw.githubusercontent.com/yaroslaff/glpi-grafana-exporter/refs/heads/master/demo/dashboard.json) to create dashboard in Grafana (or Grafana Cloud)
