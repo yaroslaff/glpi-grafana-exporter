@@ -1,15 +1,27 @@
 # GLPI to Grafana exporter
 
-This script exports GLPI statistics from database into JSON format, usable with [grafana-infinity-datasource](https://github.com/grafana/grafana-infinity-datasource) plugin of [Grafana](https://grafana.com/).
+This script exports GLPI statistics from database into JSON format, usable with [grafana-infinity-datasource](https://github.com/grafana/grafana-infinity-datasource) plugin of [Grafana](https://grafana.com/). Tested on GLPI version 10.0.6.
 
 
-![image](demo/glpi-dashboard-small.png)
+
+![image](demo/glpi-grafana-dashboard-small.png)
 
 Example config:
 ~~~
 DBURL=mysql:///support
-TICKETS=glpi_tickets
+TICKETS_TABLE=glpi_tickets
+USERS_TABLE=glpi_users
+JSONFILE=/var/www/html/statistics/glpi.json
+OPEN=25
 ~~~
+
+DBURL is in SQLAlchemy format: `dialect+driver://username:password@host:port/database`, e.g.:
+~~
+postgresql+psycopg2://user:password@localhost:5432/mydatabase
+mysql://user:password@localhost:3306/mydatabase
+~~~
+(you can omit +driver part)
+
 
 Use:
 ~~~
