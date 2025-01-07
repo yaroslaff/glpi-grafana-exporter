@@ -47,5 +47,6 @@ at this step you get glpi.json file for Grafana with Infinity Datasource plugin.
 1. Install [Grafana Infinity Datasource
 ](https://grafana.com/grafana/plugins/yesoreyeram-infinity-datasource/) plugin
 2. Configure it (Connection > Data Sources > yesoreyeram-infinity-datasource > Security), to allow "https://raw.githubusercontent.com/" (for demo JSON) or your URL. Save & test.
-3. use [demo/dashboard.json](https://raw.githubusercontent.com/yaroslaff/glpi-grafana-exporter/refs/heads/master/demo/dashboard.json) to create dashboard in Grafana (or Grafana Cloud). Set `DatasourceID` variable to your infinity datasource ID (See URL at Connections > Data sources > yesoreyeram-infinity-datasource).
-4. At this step you should see demo data from github repository. 
+3. use [demo/dashboard.json](https://raw.githubusercontent.com/yaroslaff/glpi-grafana-exporter/refs/heads/master/demo/dashboard.json) to create dashboard in Grafana (or Grafana Cloud). 
+4. Set `DatasourceID` variable (at top of dashboard) to your infinity datasource ID (See URL at Connections > Data sources > yesoreyeram-infinity-datasource).
+5. At this step you should see demo data from github repository. You can change URL to your `glpi.json` location. Do not forget to allow it in datasource "Security" tab as on step 2.
