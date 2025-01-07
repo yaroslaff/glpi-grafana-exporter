@@ -18,13 +18,13 @@
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
-  "id": 15,
+  "id": 17,
   "links": [],
   "panels": [
     {
       "datasource": {
         "type": "yesoreyeram-infinity-datasource",
-        "uid": "fe7ear8w36e4ga"
+        "uid": "${DatasourceID}"
       },
       "fieldConfig": {
         "defaults": {
@@ -68,7 +68,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "11.5.0-80207",
+      "pluginVersion": "11.4.0",
       "targets": [
         {
           "columns": [
@@ -85,7 +85,7 @@
           ],
           "datasource": {
             "type": "yesoreyeram-infinity-datasource",
-            "uid": "fe7ear8w36e4ga"
+            "uid": "${DatasourceID}"
           },
           "filters": [],
           "format": "timeseries",
@@ -94,7 +94,7 @@
           "root_selector": "summary",
           "source": "url",
           "type": "json",
-          "url": "https://raw.githubusercontent.com/yaroslaff/glpi-grafana-exporter/refs/heads/master/demo/glpi.json",
+          "url": "${URL}",
           "url_options": {
             "data": "",
             "method": "GET"
@@ -107,7 +107,7 @@
     {
       "datasource": {
         "type": "yesoreyeram-infinity-datasource",
-        "uid": "fe7ear8w36e4ga"
+        "uid": "${DatasourceID}"
       },
       "fieldConfig": {
         "defaults": {
@@ -157,7 +157,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "11.5.0-80207",
+      "pluginVersion": "11.4.0",
       "targets": [
         {
           "columns": [
@@ -174,7 +174,7 @@
           ],
           "datasource": {
             "type": "yesoreyeram-infinity-datasource",
-            "uid": "fe7ear8w36e4ga"
+            "uid": "${DatasourceID}"
           },
           "filters": [],
           "format": "timeseries",
@@ -183,7 +183,7 @@
           "root_selector": "current",
           "source": "url",
           "type": "json",
-          "url": "https://raw.githubusercontent.com/yaroslaff/glpi-grafana-exporter/refs/heads/master/demo/glpi.json",
+          "url": "${URL}",
           "url_options": {
             "data": "",
             "method": "GET"
@@ -196,7 +196,7 @@
     {
       "datasource": {
         "type": "yesoreyeram-infinity-datasource",
-        "uid": "fe7ear8w36e4ga"
+        "uid": "${DatasourceID}"
       },
       "fieldConfig": {
         "defaults": {
@@ -272,7 +272,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "11.5.0-80207",
+      "pluginVersion": "11.4.0",
       "targets": [
         {
           "columns": [
@@ -294,7 +294,7 @@
           ],
           "datasource": {
             "type": "yesoreyeram-infinity-datasource",
-            "uid": "fe7ear8w36e4ga"
+            "uid": "${DatasourceID}"
           },
           "filters": [],
           "format": "table",
@@ -303,7 +303,7 @@
           "root_selector": "daily",
           "source": "url",
           "type": "json",
-          "url": "https://raw.githubusercontent.com/yaroslaff/glpi-grafana-exporter/refs/heads/master/demo/glpi.json",
+          "url": "${URL}",
           "url_options": {
             "data": "",
             "method": "GET"
@@ -316,7 +316,7 @@
     {
       "datasource": {
         "type": "yesoreyeram-infinity-datasource",
-        "uid": "fe7ear8w36e4ga"
+        "uid": "${DatasourceID}"
       },
       "fieldConfig": {
         "defaults": {
@@ -493,7 +493,7 @@
           }
         ]
       },
-      "pluginVersion": "11.5.0-80207",
+      "pluginVersion": "11.4.0",
       "targets": [
         {
           "columns": [
@@ -550,7 +550,7 @@
           ],
           "datasource": {
             "type": "yesoreyeram-infinity-datasource",
-            "uid": "fe7ear8w36e4ga"
+            "uid": "${DatasourceID}"
           },
           "filters": [],
           "format": "table",
@@ -559,7 +559,7 @@
           "root_selector": "last_tickets",
           "source": "url",
           "type": "json",
-          "url": "https://raw.githubusercontent.com/yaroslaff/glpi-grafana-exporter/refs/heads/master/demo/glpi.json",
+          "url": "$URL",
           "url_options": {
             "data": "",
             "method": "GET"
@@ -574,7 +574,44 @@
   "schemaVersion": 40,
   "tags": [],
   "templating": {
-    "list": []
+    "list": [
+      {
+        "current": {
+          "text": "",
+          "value": ""
+        },
+        "description": "Your yesoreyeram-infinity-datasource ID. Take it from URL at Connections > Data sources > yesoreyeram-infinity-datasource",
+        "label": "DatasourceID",
+        "name": "DatasourceID",
+        "options": [
+          {
+            "selected": true,
+            "text": "",
+            "value": ""
+          }
+        ],
+        "query": "",
+        "type": "textbox"
+      },
+      {
+        "current": {
+          "text": "https://raw.githubusercontent.com/yaroslaff/glpi-grafana-exporter/refs/heads/master/demo/glpi.json",
+          "value": "https://raw.githubusercontent.com/yaroslaff/glpi-grafana-exporter/refs/heads/master/demo/glpi.json"
+        },
+        "description": "URL of glpi.json on your server, generated by glpi-grafana-exporter",
+        "label": "URL",
+        "name": "URL",
+        "options": [
+          {
+            "selected": true,
+            "text": "https://raw.githubusercontent.com/yaroslaff/glpi-grafana-exporter/refs/heads/master/demo/glpi.json",
+            "value": "https://raw.githubusercontent.com/yaroslaff/glpi-grafana-exporter/refs/heads/master/demo/glpi.json"
+          }
+        ],
+        "query": "https://raw.githubusercontent.com/yaroslaff/glpi-grafana-exporter/refs/heads/master/demo/glpi.json",
+        "type": "textbox"
+      }
+    ]
   },
   "time": {
     "from": "now-30d",
@@ -583,7 +620,7 @@
   "timepicker": {},
   "timezone": "browser",
   "title": "GLPI statistics",
-  "uid": "be7bkjnt4iayof",
-  "version": 19,
+  "uid": "",
+  "version": 2,
   "weekStart": ""
 }

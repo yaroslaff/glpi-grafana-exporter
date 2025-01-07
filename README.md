@@ -10,6 +10,12 @@ pipx install glpi-grafana-exporter[mysql]
 ~~~
 (or postgresql)
 
+On debian you may need to install:
+~~~
+apt install -y build-essential pkg-config libmariadb-dev python3-dev
+~~~
+
+
 Example config (`config.env`):
 ~~~
 DBURL=mysql:///support
@@ -41,4 +47,5 @@ at this step you get glpi.json file for Grafana with Infinity Datasource plugin.
 1. Install [Grafana Infinity Datasource
 ](https://grafana.com/grafana/plugins/yesoreyeram-infinity-datasource/) plugin
 2. Configure it (Connection > Data Sources > yesoreyeram-infinity-datasource > Security), to allow "https://raw.githubusercontent.com/" (for demo JSON) or your URL. Save & test.
-3. use [demo/dashboard.json](https://raw.githubusercontent.com/yaroslaff/glpi-grafana-exporter/refs/heads/master/demo/dashboard.json) to create dashboard in Grafana (or Grafana Cloud)
+3. use [demo/dashboard.json](https://raw.githubusercontent.com/yaroslaff/glpi-grafana-exporter/refs/heads/master/demo/dashboard.json) to create dashboard in Grafana (or Grafana Cloud). Set `DatasourceID` variable to your infinity datasource ID (See URL at Connections > Data sources > yesoreyeram-infinity-datasource).
+4. At this step you should see demo data from github repository. 
